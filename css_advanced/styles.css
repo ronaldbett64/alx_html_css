@@ -1,0 +1,537 @@
+/* Universal Box-Sizing for consistent layout */
+* {
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif; /* Primary font from Figma */
+    /* Fallback fonts if Source Sans Pro is not available */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Common Button Style */
+.button {
+    background-color: #C271FF; /* Button color from Figma */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px; /* Rounded corners for the button */
+    font-size: 18px;
+    font-weight: 600; /* Semi-bold */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-decoration: none; /* In case it's an anchor acting as a button */
+    display: inline-block; /* Allows padding and width */
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+/* Common Heading Styles (Spin Cycle OT for H1, H2) */
+h1, h2 {
+    font-family: 'Spin Cycle OT', sans-serif; /* Heading font from Figma */
+    font-weight: 700; /* Bold */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Header Styles */
+header {
+    /* Background for the entire top section, including banner */
+    background-image: url('./images/Path.png'); /* Main background image for the header/banner */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 20px; /* Padding for the nav */
+    /* The height of this section is determined by its content */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Max width for content, adjust as per Figma */
+    margin: 0 auto; /* Center the navigation */
+    padding: 0 20px; /* Padding on sides */
+}
+
+header nav img {
+    /* Logo from Figma, assumed path from downloaded images */
+    /* The HTML has a placeholder, replace with actual logo from Figma if available */
+    /* Using image_30e888.jpg, I can infer the logo is white text 'SmileSchool' on a transparent background */
+    /* For demonstration, keeping current HTML image path, but it needs to be updated with the actual logo */
+    width: 180px; /* Adjust logo size based on Figma */
+    height: auto;
+    object-fit: contain;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Space between navigation items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600; /* Semi-bold */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #C271FF; /* Highlight color on hover */
+}
+
+/* First Section (Hero Banner and Pros) */
+.hero-section {
+    text-align: center;
+    padding-bottom: 50px; /* Padding for the bottom of the hero section */
+    color: white;
+}
+
+.hero-content {
+    padding: 100px 20px 0; /* Top padding for the "Get schooled" part */
+}
+
+.hero-content h1 {
+    font-size: 100px; /* Large heading size from Figma */
+    margin-bottom: 20px;
+    line-height: 1; /* Tighter line height */
+}
+
+.hero-content span {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 16px; /* Smaller text for SMILES GRIN LAUGH */
+    font-weight: 700; /* Bold */
+    text-transform: uppercase;
+}
+
+.hero-content .button {
+    margin-top: 40px;
+}
+
+.pros-section {
+    padding: 80px 20px; /* Padding for "Learn from the pros" section */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay to make text readable on the background image */
+}
+
+.pros-section h2 {
+    font-size: 32px; /* Heading size for "Learn from the pros" */
+    margin-bottom: 60px;
+}
+
+.pros-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between the professional cards */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pro-card {
+    text-align: center;
+    width: 200px; /* Fixed width for card as per Figma */
+}
+
+.pro-card img {
+    width: 150px; /* Professional image size */
+    height: 150px;
+    border-radius: 50%; /* Circular images */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.pro-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.pro-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Lighter color for description */
+    line-height: 1.4;
+}
+
+/* Quotes Section */
+.quote-section {
+    background-color: #C271FF; /* Background color for the quote section */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    padding: 80px 50px;
+    gap: 80px; /* Space between image and quote */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.quote-section img {
+    width: 200px; /* Adjust image size as per Figma */
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.quote-content {
+    max-width: 600px; /* Max width for the quote text */
+    text-align: left;
+}
+
+.quote-content blockquote {
+    font-style: italic; /* From Figma design */
+    font-size: 22px; /* Adjust as per Figma */
+    line-height: 1.6;
+    margin: 0;
+}
+
+.quote-content h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.quote-content p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Videos List Section */
+.videos-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.videos-section h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: #071628; /* Dark text color for headings */
+}
+
+.video-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between video cards */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.video-card {
+    width: 250px; /* Adjust video card width as per Figma */
+    text-align: left;
+}
+
+.video-card .thumbnail {
+    position: relative; /* For play button positioning */
+    margin-bottom: 15px;
+}
+
+.video-card .thumbnail img { /* Video thumbnail */
+    width: 100%;
+    height: 150px; /* Adjust height as per Figma */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.video-card .thumbnail .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px; /* Large play icon */
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.video-card .thumbnail .play-button:hover {
+    opacity: 1;
+}
+
+
+.video-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #071628;
+    font-weight: 600;
+}
+
+.video-card .description { /* Description */
+    font-size: 14px;
+    line-height: 1.5;
+    color: #747474;
+    margin-bottom: 15px;
+}
+
+.video-card .author-info { /* Author info */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.video-card .author-info img { /* Author image */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.video-card .author-info h4 {
+    font-size: 16px;
+    color: #C271FF; /* Author name color */
+    margin: 0;
+    font-weight: 600;
+}
+
+.video-card .rating { /* Star rating */
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.video-card .rating .fa-star {
+    color: #C271FF; /* Star color */
+    font-size: 14px;
+}
+
+.video-card .duration { /* Duration */
+    font-size: 14px;
+    color: #747474;
+    text-align: right; /* Align duration to the right */
+    margin-top: -20px; /* Adjust position relative to stars */
+}
+
+/* Membership Section */
+.membership-section {
+    background-color: #071628; /* Dark background */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.membership-section h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.membership-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between membership benefit cards */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.membership-card {
+    width: 250px; /* Adjust card width as per Figma */
+    text-align: center;
+}
+
+.membership-card img {
+    width: 50px; /* Icon size */
+    height: 50px;
+    margin-bottom: 20px;
+    object-fit: contain; /* Ensure SVG scales correctly */
+}
+
+.membership-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.membership-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.membership-section .button {
+    margin-top: 60px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: #071628;
+}
+
+.faq-columns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Space between the two columns of FAQs */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-column {
+    flex: 1; /* Make columns take equal width */
+    min-width: 300px; /* Minimum width for responsiveness */
+    max-width: 500px; /* Maximum width for larger screens */
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 30px; /* Space between FAQ items */
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    color: #071628;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.faq-item p { /* Paragraph content */
+    font-size: 14px;
+    line-height: 1.8;
+    color: #747474;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #071628; /* Dark background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between elements */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between logo and social icons */
+    flex-wrap: wrap; /* Allow wrapping for logo and social icons */
+    justify-content: center; /* Center items on smaller screens */
+}
+
+.footer-brand img {
+    /* Logo from Figma, similar to header logo */
+    width: 180px; /* Adjust logo size as per Figma */
+    height: auto;
+    object-fit: contain;
+}
+
+.social-icons { /* Social icons container */
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons .fa-brands {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons .fa-brands:hover {
+    color: #C271FF; /* Hover color for social icons */
+}
+
+.footer-content p {
+    font-size: 12px; /* Smaller font for copyright */
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 60px; /* Smaller font for mobile */
+    }
+
+    .hero-content span {
+        font-size: 18px;
+    }
+
+    .pros-section h2,
+    .videos-section h2,
+    .membership-section h2,
+    .faq-section h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .quote-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+        gap: 40px;
+    }
+
+    .quote-content {
+        text-align: center;
+    }
+
+    .quote-section img {
+        margin-bottom: 20px;
+    }
+
+    .video-list,
+    .membership-list,
+    .faq-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .video-card,
+    .membership-card,
+    .faq-column {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 350px; /* Limit max width for readability */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
