@@ -42,7 +42,7 @@ Usage
 
 Clone the repository:
 
-git clone https://github.com/alx_html_css.git
+git clone https://github.com/alx_html_css
 
 Open any index.html file in your browser to view the page.
 
