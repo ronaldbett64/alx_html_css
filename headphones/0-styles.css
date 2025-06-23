@@ -1,0 +1,129 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+.hero {
+  position: relative;
+  background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+  color: #FF6565;
+  transform: translate(3px, -3px);
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff3c55;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.cta-button:hover,
+.cta-button:active {
+  opacity: 0.9;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}
