@@ -6,7 +6,7 @@ body, html {
 }
 
 .hero {
-  position: relative;
+ position: relative;
   background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
   color: #fff;
   text-align: center;
@@ -19,6 +19,7 @@ body, html {
   padding: 0 20px;
 }
 
+/* ===== NAVIGATION ===== */
 .navbar {
   position: absolute;
   top: 20px;
@@ -29,29 +30,74 @@ body, html {
   align-items: center;
 }
 
-.logo {
+/* Desktop */
+.desktop-logo {
   height: 40px;
 }
 
-.nav-links {
-  list-style: none;
+.desktop-menu {
   display: flex;
+  list-style: none;
   gap: 30px;
 }
 
-.nav-links li a {
+.desktop-menu li a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
   transition: transform 0.3s, color 0.3s;
 }
 
-.nav-links li a:hover,
-.nav-links li a:active {
+.desktop-menu li a:hover,
+.desktop-menu li a:active {
   color: #FF6565;
   transform: translate(3px, -3px);
 }
 
+/* Mobile */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hamburger {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin: 10px 0 0 10px;
+}
+
+.mobile-logo {
+  align-self: center;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.mobile-menu {
+  display: none;
+  width: 100%;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ===== HERO CONTENT ===== */
 .hero-content {
   max-width: 600px;
   margin: 0 auto;
@@ -90,7 +136,7 @@ body, html {
   line-height: 1.5;
 }
 
-/* What We Do Section */
+/* ===== WHAT WE DO ===== */
 .what-we-do {
   padding: 100px 20px;
   text-align: center;
@@ -136,7 +182,7 @@ body, html {
   line-height: 1.5;
 }
 
-/* Icon Font */
+/* ===== ICON FONT ===== */
 @font-face {
   font-family: 'holberton_school-icon';
   src: url('./images/holberton_school-icon.woff') format('woff'),
@@ -153,20 +199,12 @@ body, html {
   margin-bottom: 20px;
 }
 
-.icon-sound::before {
-  content: '\e90e';
-}
-.icon-video::before {
-  content: '\e910';
-}
-.icon-music::before {
-  content: '\e90d';
-}
-.icon-hearing::before {
-  content: '\e909';
-}
+.icon-sound::before { content: '\e90e'; }
+.icon-video::before { content: '\e910'; }
+.icon-music::before { content: '\e90d'; }
+.icon-hearing::before { content: '\e909'; }
 
-/* Our Results Section */
+/* ===== OUR RESULTS ===== */
 .our-results {
   padding: 100px 20px;
   text-align: center;
@@ -214,7 +252,7 @@ body, html {
   font-size: 14px;
 }
 
-/* Contact Us Section */
+/* ===== CONTACT US ===== */
 .contact-us {
   padding: 100px 20px;
   text-align: center;
@@ -255,9 +293,9 @@ body, html {
   align-self: center;
 }
 
-/* Footer Section */
+/* ===== FOOTER ===== */
 .footer {
-  background-color:#000435;
+  background-color: #000435;
   color: #fff;
   padding: 40px 20px 30px;
   text-align: center;
@@ -298,29 +336,65 @@ footer p {
   opacity: 0.6;
 }
 
-
-/* Responsive Styles */
+/* ======= MOBILE STYLES ======= */
 @media screen and (max-width: 480px) {
+  .desktop-menu,
+  .desktop-logo {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+
   .navbar {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
   }
 
-  .nav-links {
+  .hamburger {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .mobile-logo {
+    align-self: center;
+    height: 40px;
+    margin: 10px 0;
+    margin-top: 0px;
+  }
+
+  .mobile-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-menu ul {
+    padding-left: 20px;
+    display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin: 20px 0;
+    gap: 15px;
   }
 
-  .nav-links li a {
+  .mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
     font-size: 18px;
   }
 
-  .logo {
-    margin-bottom: 20px;
-  }
-
   .hero-content {
+    margin-top: 20px;
     max-width: 100%;
     padding: 20px;
   }
@@ -342,16 +416,32 @@ footer p {
     gap: 40px;
   }
 
-  .what-we-do {
-    padding: 60px 20px;
-  }
-
-  .what-we-do h2 {
-    font-size: 28px;
-  }
-
   .results-grid {
     flex-direction: column;
+    align-items: center;
     gap: 40px;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    margin: 0 8px;
+  }
+}
+
+
+
+/* ===== DESKTOP ONLY ===== */
+@media screen and (min-width: 481px) {
+  .mobile-nav {
+    display: none !important;
   }
 }
