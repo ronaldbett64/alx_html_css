@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headphones Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="8-styles.css" />
+</head>
+<body>
+  <!-- HERO Section -->
+  <section class="hero">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Desktop Nav -->
+        <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo desktop-logo" />
+        <ul class="nav-links desktop-menu">
+          <li><a href="#">what we do</a></li>
+          <li><a href="#">our results</a></li>
+          <li><a href="#contact">contact us</a></li>
+        </ul>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav">
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+          <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo mobile-logo" />
+          <div class="mobile-menu">
+            <ul class="nav-links">
+              <li><a href="#">what we do</a></li>
+              <li><a href="#">our results</a></li>
+              <li><a href="#contact">contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p class="subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+        <a href="#" class="cta-button">Call to Action</a>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+          cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+    </div>
+  </section>
+
+   <!-- WHAT WE DO Section -->
+  <section class="what-we-do">
+    <div class="container">
+      <h2>What we do…</h2>
+      <p class="section-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+        nulla pariatur.
+      </p>
+      <div class="services-grid">
+        <div class="service-item">
+          <span class="icon icon-sound"></span>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service-item">
+          <span class="icon icon-video"></span>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service-item">
+          <span class="icon icon-music"></span>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service-item">
+          <span class="icon icon-hearing"></span>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR RESULTS Section -->
+  <section class="our-results">
+    <div class="container">
+      <h2>Our results speak for themselves</h2>
+      <p class="results-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+        dolore eu fugiat nulla pariatur.
+      </p>
+      <div class="results-grid">
+        <div class="pentagon-item">
+          <span>+2%</span>
+          <p>Lorem ipsum dolor</p>
+        </div>
+        <div class="pentagon-item">
+          <span>+2%</span>
+          <p>Lorem ipsum dolor</p>
+        </div>
+        <div class="pentagon-item">
+          <span>+2%</span>
+          <p>Lorem ipsum dolor</p>
+        </div>
+        <div class="pentagon-item">
+          <span>+2%</span>
+          <p>Lorem ipsum dolor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT US Section -->
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <h2>Contact us</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+        <button type="submit" class="cta-button">Call to Action</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER Section -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <img src="images/logo_headphones.png" alt="Headphones Logo" class="footer-logo" />
+      <div class="social-icons">
+        <a href="#"><img src="images/icons8-facebook-512.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/icons8-twitter-500.png" alt="Twitter" /></a>
+        <a href="#"><img src="images/icons8-instagram-500.png" alt="Instagram" /></a>
+      </div>
+    </div>
+    <p class="copyright">
+      © 2025 Headphones. All rights reserved.
+    </p>
+  </footer>
+
+
+  <script src="8-script.js"> </script>
+</body>
+</html>
